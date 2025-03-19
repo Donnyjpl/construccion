@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load static %}
 
 {% block title %}{% trans "Proyectos - Mi Empresa de Construcción" %}{% endblock %}
 
@@ -23,7 +22,7 @@
         <!-- Proyecto 1 -->
         <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="residencial">
             <div class="card h-100">
-                <img src="{% static 'img/proyecto1.jpg' %}" class="card-img-top" alt="Residencial Las Palmas">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" class="card-img-top" alt="Residencial Las Palmas">
                 <div class="card-body">
                     <h5 class="card-title">{% trans "Residencial Las Palmas" %}</h5>
                     <p class="card-text">{% trans "Complejo residencial de 24 viviendas con áreas comunes y piscina." %}</p>
@@ -40,7 +39,7 @@
         <!-- Proyecto 2 -->
         <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="comercial">
             <div class="card h-100">
-                <img src="{% static 'img/proyecto2.jpg' %}" class="card-img-top" alt="Centro Comercial El Bosque">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" class="card-img-top" alt="Centro Comercial El Bosque">
                 <div class="card-body">
                     <h5 class="card-title">{% trans "Centro Comercial El Bosque" %}</h5>
                     <p class="card-text">{% trans "Centro comercial de 12,000 m² con 45 locales comerciales y estacionamiento subterráneo." %}</p>
@@ -57,7 +56,7 @@
         <!-- Proyecto 3 -->
         <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="industrial">
             <div class="card h-100">
-                <img src="{% static 'img/proyecto3.jpg' %}" class="card-img-top" alt="Planta Industrial Tecnova">
+                <img src="https://img.freepik.com/foto-gratis/silueta-construccion_1127-3246.jpg?semt=ais_hybrid" class="card-img-top" alt="Planta Industrial Tecnova">
                 <div class="card-body">
                     <h5 class="card-title">{% trans "Planta Industrial Tecnova" %}</h5>
                     <p class="card-text">{% trans "Planta industrial de 8,000 m² con oficinas, almacén y área de producción." %}</p>
@@ -74,7 +73,7 @@
         <!-- Proyecto 4 -->
         <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="renovacion">
             <div class="card h-100">
-                <img src="{% static 'img/proyecto4.jpg' %}" class="card-img-top" alt="Renovación Edificio Histórico">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="card-img-top" alt="Renovación Edificio Histórico">
                 <div class="card-body">
                     <h5 class="card-title">{% trans "Renovación Edificio Histórico" %}</h5>
                     <p class="card-text">{% trans "Renovación y rehabilitación de un edificio histórico para uso como hotel boutique." %}</p>
@@ -91,7 +90,7 @@
         <!-- Proyecto 5 -->
         <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="residencial">
             <div class="card h-100">
-                <img src="{% static 'img/proyecto5.jpg' %}" class="card-img-top" alt="Condominio Vista Mar">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750" class="card-img-top" alt="Condominio Vista Mar">
                 <div class="card-body">
                     <h5 class="card-title">{% trans "Condominio Vista Mar" %}</h5>
                     <p class="card-text">{% trans "Condominio de lujo con 12 unidades, vistas al mar y amenidades exclusivas." %}</p>
@@ -104,4 +103,32 @@
                 </div>
             </div>
         </div>
+    </div>
+    
+    <!-- JavaScript para filtrado de proyectos -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const proyectos = document.querySelectorAll('.proyecto-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Cambiar el estado activo de los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filtrar los proyectos
+                proyectos.forEach(proyecto => {
+                    if (filter === 'all' || proyecto.getAttribute('data-category') === filter) {
+                        proyecto.style.display = 'block';
+                    } else {
+                        proyecto.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
 {% endblock %}

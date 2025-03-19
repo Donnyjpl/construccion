@@ -1,133 +1,152 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load static %}
 
-{% block title %}{% trans "Acerca de Nosotros - Mi Empresa de Construcción" %}{% endblock %}
+{% block title %}{% trans "Acerca de Nosotros - Lvv Construction" %}{% endblock %}
 
 {% block content %}
-    <!-- Historia de la empresa -->
-    <section class="my-5">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2>{% trans "Nuestra Historia" %}</h2>
-                <p class="lead">{% trans "Más de 30 años de experiencia en la industria de la construcción" %}</p>
-                <p>{% trans "Fundada en 1995, Mi Empresa de Construcción ha crecido hasta convertirse en una de las empresas de construcción más respetadas de la región. Comenzamos como una pequeña empresa familiar y hemos evolucionado para manejar proyectos de todos los tamaños, desde renovaciones residenciales hasta grandes desarrollos comerciales." %}</p>
-                <p>{% trans "Nuestro compromiso con la calidad, la integridad y la satisfacción del cliente ha sido la base de nuestro éxito durante todos estos años. Cada proyecto que asumimos es un testimonio de nuestros valores y dedicación a la excelencia." %}</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="{% static 'img/historia-empresa.jpg' %}" class="img-fluid rounded" alt="Historia de la empresa">
-            </div>
+<!-- Historia de la empresa -->
+<section class="my-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2>{% trans "Nuestra Historia" %}</h2>
+            <p class="lead">{% trans "Más de 30 años de experiencia en la industria de la construcción" %}</p>
+            <p>{% trans "Fundada en 1995, Mi Empresa de Construcción ha crecido hasta convertirse en una de las empresas de construcción más respetadas de la región. Comenzamos como una pequeña empresa familiar y hemos evolucionado para manejar proyectos de todos los tamaños, desde renovaciones residenciales hasta grandes desarrollos comerciales." %}
+            </p>
+            <p>{% trans "Nuestro compromiso con la calidad, la integridad y la satisfacción del cliente ha sido la base de nuestro éxito durante todos estos años. Cada proyecto que asumimos es un testimonio de nuestros valores y dedicación a la excelencia." %}
+            </p>
         </div>
-    </section>
+        <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5" class="img-fluid rounded"
+                alt="Historia de la empresa">
+        </div>
+    </div>
+</section>
 
-    <!-- Misión, visión y valores -->
-    <section class="my-5 bg-light p-4 rounded">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
-                        <h3 class="card-title">{% trans "Misión" %}</h3>
-                        <p class="card-text">{% trans "Proporcionar soluciones de construcción de alta calidad que superen las expectativas de nuestros clientes, mientras fomentamos un ambiente de trabajo seguro y colaborativo para nuestro equipo." %}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-eye fa-3x text-primary mb-3"></i>
-                        <h3 class="card-title">{% trans "Visión" %}</h3>
-                        <p class="card-text">{% trans "Ser reconocidos como la empresa de construcción líder en innovación, calidad y servicio al cliente, contribuyendo al desarrollo sostenible de las comunidades donde operamos." %}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
-                        <h3 class="card-title">{% trans "Valores" %}</h3>
-                        <ul class="list-unstyled text-start">
-                            <li><i class="fas fa-check text-primary me-2"></i> {% trans "Integridad" %}</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> {% trans "Excelencia" %}</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> {% trans "Responsabilidad" %}</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> {% trans "Trabajo en equipo" %}</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> {% trans "Innovación" %}</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> {% trans "Sostenibilidad" %}</li>
-                        </ul>
-                    </div>
+<!-- Misión, visión y valores -->
+<section class="my-5 bg-light p-4 rounded">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">{% trans "Misión" %}</h3>
+                    <p class="card-text">
+                        {% trans "Proporcionar soluciones de construcción de alta calidad que superen las expectativas de nuestros clientes, mientras fomentamos un ambiente de trabajo seguro y colaborativo para nuestro equipo." %}
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">{% trans "Visión" %}</h3>
+                    <p class="card-text">
+                        {% trans "Ser reconocidos como la empresa de construcción líder en innovación, calidad y servicio al cliente, contribuyendo al desarrollo sostenible de las comunidades donde operamos." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">{% trans "Valores" %}</h3>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="fas fa-check text-primary me-2"></i> {% trans "Integridad" %}</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> {% trans "Excelencia" %}</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> {% trans "Responsabilidad" %}</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> {% trans "Trabajo en equipo" %}</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> {% trans "Innovación" %}</li>
+                        <li><i class="fas fa-check text-primary me-2"></i> {% trans "Sostenibilidad" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Equipo -->
-    <section class="my-5">
-        <h2 class="text-center mb-4">{% trans "Nuestro Equipo" %}</h2>
-        <p class="text-center mb-4">{% trans "Contamos con un equipo de profesionales altamente calificados y comprometidos con la excelencia." %}</p>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="card h-100">
-                    <img src="{% static 'img/equipo1.jpg' %}" class="card-img-top" alt="Director General">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{% trans "Juan Pérez" %}</h5>
-                        <p class="card-text text-muted">{% trans "Director General" %}</p>
-                        <p class="card-text">{% trans "Con más de 25 años de experiencia en la industria de la construcción." %}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100">
-                    <img src="{% static 'img/equipo2.jpg' %}" class="card-img-top" alt="Directora de Operaciones">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{% trans "María López" %}</h5>
-                        <p class="card-text text-muted">{% trans "Directora de Operaciones" %}</p>
-                        <p class="card-text">{% trans "Especialista en gestión de proyectos y optimización de procesos." %}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100">
-                    <img src="{% static 'img/equipo3.jpg' %}" class="card-img-top" alt="Arquitecto Principal">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{% trans "Roberto Sánchez" %}</h5>
-                        <p class="card-text text-muted">{% trans "Arquitecto Principal" %}</p>
-                        <p class="card-text">{% trans "Diseñador innovador con enfoque en sostenibilidad y eficiencia energética." %}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100">
-                    <img src="{% static 'img/equipo4.jpg' %}" class="card-img-top" alt="Ingeniera Civil">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{% trans "Ana Martínez" %}</h5>
-                        <p class="card-text text-muted">{% trans "Ingeniera Civil" %}</p>
-                        <p class="card-text">{% trans "Experta en estructuras y gestión de proyectos complejos." %}</p>
-                    </div>
+<!-- Equipo -->
+<section class="my-5">
+    <h2 class="text-center mb-4">{% trans "Nuestro Equipo" %}</h2>
+    <p class="text-center mb-4">
+        {% trans "Contamos con un equipo de profesionales altamente calificados y comprometidos con la excelencia." %}
+    </p>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" class="card-img-top"
+                    alt="Director General">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{% trans "Juan Pérez" %}</h5>
+                    <p class="card-text text-muted">{% trans "Director General" %}</p>
+                    <p class="card-text">
+                        {% trans "Con más de 25 años de experiencia en la industria de la construcción." %}</p>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" class="card-img-top"
+                    alt="Directora de Operaciones">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{% trans "María López" %}</h5>
+                    <p class="card-text text-muted">{% trans "Directora de Operaciones" %}</p>
+                    <p class="card-text">{% trans "Especialista en gestión de proyectos y optimización de procesos." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" class="card-img-top"
+                    alt="Arquitecto Principal">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{% trans "Roberto Sánchez" %}</h5>
+                    <p class="card-text text-muted">{% trans "Arquitecto Principal" %}</p>
+                    <p class="card-text">
+                        {% trans "Diseñador innovador con enfoque en sostenibilidad y eficiencia energética." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e" class="card-img-top"
+                    alt="Ingeniera Civil">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{% trans "Ana Martínez" %}</h5>
+                    <p class="card-text text-muted">{% trans "Ingeniera Civil" %}</p>
+                    <p class="card-text">{% trans "Experta en estructuras y gestión de proyectos complejos." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Certificaciones -->
-    <section class="my-5 bg-light p-4 rounded">
-        <h2 class="text-center mb-4">{% trans "Certificaciones y Acreditaciones" %}</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-2 col-6 mb-4 text-center">
-                <img src="{% static 'img/cert1.png' %}" class="img-fluid" alt="Certificación ISO">
-                <p class="mt-2">{% trans "ISO 9001" %}</p>
-            </div>
-            <div class="col-md-2 col-6 mb-4 text-center">
-                <img src="{% static 'img/cert2.png' %}" class="img-fluid" alt="Certificación LEED">
-                <p class="mt-2">{% trans "LEED" %}</p>
-            </div>
-            <div class="col-md-2 col-6 mb-4 text-center">
-                <img src="{% static 'img/cert3.png' %}" class="img-fluid" alt="Certificación Safety">
-                <p class="mt-2">{% trans "Safety First" %}</p>
-            </div>
-            <div class="col-md-2 col-6 mb-4 text-center">
-                <img src="{% static 'img/cert4.png' %}" class="img-fluid" alt="Certificación Green Building">
-                <p class="mt-2">{% trans "Green Building" %}</p>
-            </div>
+<!-- Certificaciones -->
+<section class="my-5 bg-light p-4 rounded">
+    <h2 class="text-center mb-4">{% trans "Certificaciones y Acreditaciones" %}</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-2 col-6 mb-4 text-center">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEX///8KT5MARI4AQo0ATJIARo8AQIwASZAAPYsASJAAP4wATZL4+vySp8UqYp4AO4rH1eRtkLhgg6+twdcAVJeAnsHp8faoutGgttDy9vno7vQ3Zp/a5e7j6vG9zd4AOIkiXJrT3um3yNtBb6SLpsWWr8t1lbtVfq1KdqhEdKg/bKJvkbiEocLD0eCovdRliLMAMIYALISBuch3AAAW/UlEQVR4nO1d6ZqiPLeVjJBQ4IAKKAqI4uz73f/NnYADCcQuba2hn8P6U6VCyCI7e8iw0+m0aNGiRYsWLVq0aNGiRYsWLVq0aNGiRYsWLVq0aPGPIUwOs3QwHg/SWXca/HRt3ovEX21iiiFjZglGAOZOvh9EP12z12ELco7pmowRFE8W67wvkK+3jmcxwXdubf5pmuFs5TDAWLzuZYMkUgRzNO2Oh6et4UJI1lnyLwptMMsNIY0cLaP71bdH0z5FooHjYfKNdXsHogxBNvf2S5Muwj9dmBo4HpywyeBkYH9X7V5HOnEZiP2ig0UxNXd3G7E7YfhUEEtWBmHsNP2+Or6C1DEJ6l+kLlwIHWoNddrE7q5NTPPLp2CwBcT8Fzget4TFyyujzICG32cEr/ddpSWn6W5CmJFDa33rgckKEND/5R2yuyCMjq8dKlwTty+6YdJjFBNvcdr7aZqOl8N8iyAwjWXYGRCIlrfbo5UL8eoXK9awR6C3vCmMAYXG8fxvZFAPM5OZBAqrL/5YaN0tfxnlhOSVEEc7KFr9e6v9OMZYNMCNn30ySX5tjhV0OqODP+zFaHvaCeu4JOja5Y4epLOqlOkCMudXdscoN0nVpzrJBOKb+A1MfPmlb6bnf3rQub6M6YaxD6mkYwzJ8veZjkIkB9XHI4HOjW7EwFXw+ublItuBu9vVS5NMpN4XrBjc/rZmHBJLNu1DwvKqFdZwff33xrBzIKySzRkGsUwpRRSnX1XXv0EUQ+RVjIIFIcfq14x5twaqGHaWpPq6M9pCU1YwM4zc0xfV9i/QNYDnYXRtkigGqFv9mlhm1RwSw86C9KRCToxUZmNFwARViuqn4VssD8O1CfuloCUemcg+zFYmIjOcEij13M4SktX5v3RCSNbpevCX6NQMuGXNfApRFnSmHlyP5J9JLDWFzLDjM0NupQEhQ/EnORG2LWQgcoghycKPoU/IpQOFubDWSw/n8s9Tl8zkq2WGavMWyoesRitGrOz82c6hKd/8M1gRSenNJggjpV06E7iSP6oME2uuNFIXWxDjfqWUT/DHVaqogvyWA8oxjZdVFVNiKPGhyrDzAWPJtE9XiPNYiUOGhCg3fDuG0FUaYYEdPzaJt7tYezsmqpNZY2h7cHz5N5itAWETSg/KDSuGf7Iv7qGr9JMeLFpstpgT4AwLPSjUjHpHjWFnzM56aNYXIfB8FXX2zFIZCf/m5ygOXKj0kozBc9tNVwYjrjeceaRWuzrDjkM+OukJmAzGfsn1BD3VDPag9ceBkC/EDAJFBI+E3AgHs13MCOQ0SyPZia4xDKY7algmIdv91Yu1J3ChuN32Gjo/Y/pDT1WTU8728ufgsKMcMBNO+kP/kIRlta+xRRAls+Uq90xADSPP5MBelKv6a8JJ/xEHzl6o79qOYV67ZEC2x+HCmruMmdhztpu8H9NNP18vJjGHIhA2XS/vYa92WxeYR+WLyGLZV1D4BPX+sgZOPaaLz9FDNMj6jmHBIrxHBjaLEXBMvUVvOStKmLBj7T6fMHW0ZlbTaN+CmQuUWvgQ18eQDq7M2Z52D7N0gVdpOhMyK91JnHrhPeCNlC9WdfXz9QgJXMqfE+g2nI81acpW32xcZses0UAO6KtfLBpd4Kuxna/lj0H836p+STJnzWHS/H91kRRuw3/r+ldT878P5YuI/LesX/SlCNKZIjVR2uwn01RjqZO0adtGs0PzulmtwCRtXtSiRYsW/wjsx6C7NQi6x4+P/f5jeUyCv7LXdhCly+EpX2826/7q4zgNvmAkPIudBxCParcFyXDtFUsusGVhDBjx1qtDZSc+ezkFRofV1jAhtihFCFFqiWLQZDerP+pVDAH6HByoj012McSIGxI4sqC3/ji7AMd4ckOsHaQY+WsPUmTUwS3xrvy3OnBDq/GUJrglMwxzbHHtdQhYeeEF+KR6O2TcfOhoxQHVFyFAAX/nFOPTDO2M3a+cwam5mHV8UH0DGgzDlfnZQy1z9baw/1mGwYLc51cCmSe50AbDMXvkkZi+axr1SYah88D1lEofagyD02dv6ArWf4+oPscw8OjnV6tQGU7jR553hhW/ZVHDcwzzx+unZTiFTfX5h8eCdwwzPsXwAz5NUGGYsAcl9PrcZjj9tQwj/lwF6wwj45kWLGG+3orPMBzi5wlKDO3N053YQN7LazefYej9RRNKDIfg86sbsBbfyDAlzR8ogBhjCCyK7tC/MTzM/4KgYcD9n6r/CEPAL9BSOwPhgmGvIWTU6427SdI9jPf9CQXaXnZjuL3TCbnwumnhft+hiF6U0yw+w9GKYOxcfi4YNq6g8koDO/K3QNPRrgwHTQko+WHg5Kfd7pQ7UN9NrReHGW8xTrOFhOs0k0Mgt/4zqVvkJHcbpVwZTrRCgmAWXuIre5ozLUX2ptWMPU2HVCzutPF80LRW0brulF0YplpTihwlLEtN3UV0800MD00xQxqDPEBqM14Y9nUiyEGtj2nVbT06/TKGM40qBetlQw9EW6WkM8Mg1gkpHtZv1soyfk+Y8TlDnZwhQNfLWj8JNrJncGbY1d3MrcaCoYH2usn3MEz0eoBTbDlDZQ7A3lj8hjPDlc7sombNA51K5+gtS6c+ZWg3dGlVA4vM82Mlr6EIEa9gBUNbK31WY7JHRC+6/kresubmU4Yd449OG4XmIruuZg+nFYqvAu3AjkYXd/a6xrYa/fVrGJ4+c5wRZp7clBX0Et6Ycu3csSr0LXOLnzPUKNMGhKOKFoOGdtfWm1NN90q09iJ+x4DG5ww78WPhXTGmWGudpT7u0ti5SHshecf+twcYLh8N8Tl1VY6ZlqFu6t7WGs76uqSvYhhMHo/RKexJI546p9fg9VUoJbTPAO9Y3fcAw073zli3Dhx7VbXWWoaxrh5brdZ9h1fzCMPOUm/173AkN3unrbae4ULXhvgdqxgeYlgsTnwC5HSJjBxdtZ9h+I4lU48x7AwfHbI+F7D+9xh2PuAzFOHZG9E6bb+VYSeJnxlUPC/G3Dzehtou+439sMSKPDG4X66O1Tp8z1iLb9OlF0xXxZL9x1BGuVp/Wmvx9aHyt9nDClHmEPxghwzveW1cMwsaeborv8unUWB391v2CEkg+tBA609rPW/tu4Df5Jc2EH047h8m5M9A63vRk26NvjaA+a7Ywpvf8L+b9g78tYete0P6JUjYCcCjvphWnmm/eeFXMJTNtiktlQySYYz/IK9w1rG1GlIX2Gq1Ln517uIvGHJVD9rTbEJ0Y/plKb6+dJ3w6V8FfMsi8OcYGtSpha/2aNA3tf5OYa41w8lFzRuLZhOt38vfkgDmSYYG9ZqjLKPxRDNRX7hcejOHGuP12qHx5mXfwtBAps6VSptUSpdLP4xVX+J+0Ovc92zge5qhqF99OKbAtDETWarMmXYCmKt7SCO9TrZeWrE47Z6R6IZiLf/ya9fWMTQo7jdM2rJRzrkJ9BOkHGQ3x2bkI+01tFd/xlMYuvAMbeHW5Ud3pGVYDB46Y9kz6a6bZsMtL9DPnBkco8luOR77qy3XxyzcfG2J2xPz+NowVrQCY85puPSXH70JI01JQJeNNdqxmqIAbmEA8N1ZbvBibPgyw5IEtbCA3n+7Dskn5t8s5RBG88V1w29h+EfcvM/lA2PmzUe/rEi/nCGtdgT9xaq46zDIb2Yo7dYfxU8visKvz8l8NUMshwXhs4s3rcnri/e/mCFSnevIe0pQ8foNceHXMkRWzWcOFk8M1JH+O7Zf/DXDR0aGKW26dT33QaOB3I9mdb+PIcqTiX4dmwSw1QlZ19AG/PVHwsmbMrv8LUNhAwZb8ieOFrozjGv73mccBb/juzYIvcCw4HhvZwHHZHc/bA2Wsca9q57GJv77NkANTfwAWLk2kYAb2GVh62GFiFWLlziymJf9Wcbs9ISYbjYSYWas3rpzffbxEIoOdRxX8KWcNbu4cJwp4rzYoIWh5TyWrLQ7nFBx53ln13lrF0bb7FfmVYzS7LRebLfbTb7yD8/YsGSQ7frrzWJRbM9bpr+SXYsWLVr8LcJ9phhsO8sa49NhljXt8nHf1IeHfWMKxs72tfIG2Tfnbe3P1dDMn8OGDY/nzR2w+X/N6drJvFH5kxurI2gJmX9zVjPbgOow5Qk0JqV91tiyY+fEr2/fnhGjftnxmlLriiCGmuW0X4uEqFvj7Bg2Rmatc5KeIEgGy6w/McjcpQZw5y6ON7sPP43K/fU5qU+OJaCW5a1zgo0sPV+PDAJFLqekkXAnI3l4GK5jUp6I4BLL8AzD8zzhXLrlV5bTX44Bqt0WeqTWYEvS7APfgByoQ5UDszaPFxwB5wU17OTC5ZqG4SjI2TEYhWFYuGNrT/xIsOH5Sb1g9UkJcZt5e74BjeReQyYNStj+xoCWwRdLJWGbkq/NtpPBiVJoAu9UvZwTVFMtdkL8I6m+OsV6XTU5Z6cPvXPdgkHuMkI3+2KSXr2knnMvh73ZyoHMRMPz0HBmIrVJQw98d46oG5Lay7UXYCvaa7o3TGati5MDdqRWuTrDrlvurkv2E0bcrQjcB7CWZSFYNNOkfR8GQNUukQd6ycpibHtxCELEVMtdZ7i97ZA87GLGnMyrzbQEa+L9VNrEAj5zFb0eISoi/ryaNVwSVR3VGKaQSgknxg61UM0sCII/e0xLRqQMzp1gaFGuvnKumjaVYeApKa47gXhBlpz43F5A9NNh79E0bwZ7iSHOEVAMeMqwbMpUhn2oeD2RgTeHLWHOVbIDR01k/jNYEnZOHz/dMrZIOgOmbj7uQznfnMKwy0y5/lOvHEEde9A8H0AQOcD7eYKilSgp5g+GFoxLP27gAjkZZxAzSY5lhoGn6KmDB8/efLAnMBb28WDAyU8qmQpdwW22hm7v4noP5nAjqZexCat6ygxXSkrIIyS3bKFTj8D9kRDtoPhPIJpASOPKK+nG0JD0wwlWGwklhjMi7xscuqQ6K6E4vgWD12c/3wf7RKhcv4JyZbdF6HOra8UwlGV0tCFAGeSPJvRNm1/fBaFGJ9LaGfvEyPAmYjOXXn+rGMp6VDQ6V2Ixn8L4t2WCFF0HD6Xet2Sw0oPD20EPN4Y+Ybef95BsZZUyXRDz9HOe2l30CPHkQx88UC2BnZBCvUbdWZGDdpYEIiC6nYsQbojSBTsfDFo/Ei19imRC3EWlPOwdYYuLxxUhsI7NuesCi7jufG4hem0kn0BPFsgBJeA3NmAJeyxE9VRp0TSGVqE/gmVe7ANG2/5uOByuerkDIcbeSXS9ZENYT1qKmi4Y2/yGIx/uIVyZEOxu7Rj2TbLpZh5jZr7shreWCaJ077iELPYUyG5ouiDM+9mTAj5H0jOJ1b+JXepRC7iOr4kPkr1FMFrcNK49nkBmZb/FyP8BUd8ipjE+K0c7p2ByV+9nhnXdspSsXMa8782G/PeYrkQwS3rpqDN1gPGnWo9OkPVsO/IXLgPbN85dfzmC2QYyxnPP2n6SeGRmgG1xLiDa/XQc+DTCzHEZ5XEvTe7nKO2Oc4MDk20G/0D30yAcrC3RlMCK8+F4JiubIEn91cITbceAsZr9Q9LZgN311zEqTsY13TlEXpFUyqNs7hZnBEIjPqW/IcR9FcE0Gex7+SSm5+F9E/B40d9lafIPHwWsgx2EYTRNkmkUhv9mr2vxm2FPB8siKbfyZTjz/cFU1YJR6vtps3PNBvd86XC2zDK/q9jM8CAKblqYZCDHyKGMB2ncx2HCRCgAzFgK2kYnQACAxJEem2wgBIDIZ3WWsKmrn1oJ+8UhZBgwXsXOwQ4X6+NYXJ8h35jS7h/bs6pETODVXr0kyMCQAISqQLVYrkyL77h5W8faxbS8jlOshgcDqN/kGfGyEAg4v83TBRN8LhipUXEnMrl0hqQNb0kbOccvMjy4nMJsNhs4gJPLiFLgUA566ew4wfw6Gjp1OQLiOt+zuLK3ehRzPUMPGeSUdrviDuM6gba1DNJPZ4MF4OpQW5/KDKfMQNcmtF5sw4BzelkwvsT8vEepyH3HzyRWlnGZFt0ifj6Q0V7TKh2CPfVjqt+oKwq5JuXrYcMtA5APyMF5VDLDxm06wBbOkXiixHAAwNvGOcbQuE3J9qxzVSPMwUU47Zifk1IkwLgeATclxuXAuzSPWbHeV8fQjtFtvFCUQstxcqva07tB1mW24FQMxxoKww/8li34JRaoSpvWhbw83NAHhnX9zseoHIvf0Wpj8oletnVmbrE2tMZwNBrZ58KqI4+GVtnsB8bB9XUeweX3blkIVxj2KXvXeP/I49XSluJDIVc5rfb8iR5hJuU21+pQUVG58xs4ThaLxSZWGCZC/Ao9OQZoe/syBYZRzn3Q25RHyC/pQZNtUYjDZYYOfXVD1w0Rl7IX2g4qhUgEPJW2dI2iS0RYSq+WiKaQLEaPKgyFDimkM3PNalJqAMrd3x6XBronSE7KkgKZIXjPFvwCkcGrmgfn7hK4hrSrUdTq47wZ+yZzI3Ubdo0hQeWkadTtVm/hRLkjCsZcuq9PqTSHNZAZBq417HSH/X7Pf1lYC8G89emI8qKzdQnH1esUHXVYdE0p2Yo9QfKmOZXhdLKd1IfTIosXhUyBIR2CtaLSvjaVYZfQ3ZoVRh9YL58Esb2qtE7Rv8rNdAMoC0xe1j/DXJoqWyM544PKsNM8lyR0kDEPi0PzKkVT6Eu0le2D9NCxMDS0OI0eCGfk1VniI+TXdUCiG5YMx0DeuHkqX/Uey1lEcypn/akxbGBmIaNc9HSABq0YCvM7ucNwKJwh5CfhNHWEC2S8pnSE2UJOMcxgp47Fy1wVBcPqgitDSTM+xXDaJ5xapdwKhughhmvGrqcqD4WKe3HZ4pQgxOL+KRZWN0dFXUWzxtXvZ4Ug2lBiKKRUcpz/xNDOLIvDyVnndJU2FFIqrWNQGM7Gy1vvO4n3/mIi4YNDEBedGluzPS3Mf6r0w3WpacQLj6tqb/l9TaMgjYUrZCwvpan9cG/JyU0UhjLETa8fNjteWCaMs0BIX6FBVF0qbOSycO4kXVqY/7vWQkKwhpyy3q05poBLurR331rIGHkGfNtURxCjIlGELexhVRGrzEPVJZX72gmBIa89vccwjC0ONtKFwh6S6s1skNyZ7zIUr/MtibBKJOTcUB6vullh/qeFRTMqN0aYfyrddoehHVNuqXvNHZlUzOWk7jJDO5AO7xIWm7w0IT7snW7377HVu1T51kMOpDQTwshXlcuwbKvvMdxhVM/wIpTL7UbRv+RNwjLDYRxXsaMIappZsZ/BBlRryB3kllUaEINd1deanr3HrFKmtnircvSmZxghbtU1RGJWWfJFqCavXpUZjgmtjO/QQvFTjOrwq1c5xPSsvkV/vDaijy9drhDTSyPusJouT2UYHAfH4o4loM1zjB1+bf0UK31ZYSicvNvalIOIVV8LhkdCCMqTleyVaLnLSz9CAxSnZgVLwsGliUWcbhZbSIIdqSXYrnnec1DurxB2tL+UtjCWVRYyD/phMVtqcWWrvqppcmywcjGLLQJ0Gr9EsFi0xS1vuBwK/6g6ILcneKP+yRPW7LpUy3ZEK3qnHFn1rRg1hrjMuVMkKafSNlRwbvahcBKtXLgXnKpb9dXYQlQGW/3VyRPX8Zen5ZZEeP7YQpa8PLnnijiDcsSqk6uDTekZcGrWvKiTySTTfWnDEYJABrwI9p6VBXNSW7R3nEMkjbWdmIWoRRFlkzdMfkxPxtydWz2lqO4Guq65VcRxsHVdl6zr+mPmS5tmOyPfL3Yf2H4N19eXrMHcdZ36cOlUXCJ/TkSl5q7Rf9ueYJ2x1Z3O+JaxhfvHPrZo0aJFixYtWrRo0aJFixYtWrRo0aJFixb/r/F/roq+IqucAa4AAAAASUVORK5CYII="
+            class="img-fluid" alt="Certificación ISO">
+            <p class=" mt-2">{% trans "ISO 9001" %}</p>
         </div>
-    </section>
+        <div class="col-md-2 col-6 mb-4 text-center">
+            <img src="data:image/png;base64,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"
+            class="img-fluid" alt="Certificación ISO">
+            <p class=" mt-2">{% trans "LEED" %}</p>
+        </div>
+        <div class="col-md-2 col-6 mb-4 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2647/2647625.png" class="img-fluid"
+                alt="Certificación Safety">
+            <p class="mt-2">{% trans "Safety First" %}</p>
+        </div>
+        <div class="col-md-2 col-6 mb-4 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2371/2371899.png" class="img-fluid"
+                alt="Certificación Green Building">
+            <p class="mt-2">{% trans "Green Building" %}</p>
+        </div>
+    </div>
+</section>
 {% endblock %}

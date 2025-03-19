@@ -4,3 +4,11 @@
     color: #007bff;
     padding: 10px;
 }
+
+.bg-gold {
+    background-color: #F5C300; /* color dorado más suave */
+}
+
+.text-dark {
+    color: #333; /* texto oscuro para que contraste con el dorado */
+}
