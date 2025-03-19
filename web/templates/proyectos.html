@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Proyectos - Mi Empresa de Construcción" %}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{% trans "Nuestros Proyectos" %}</h1>
+    
+    <!-- Filtro de categorías -->
+    <div class="mb-4">
+        <div class="btn-group" role="group" aria-label="Filtro de proyectos">
+            <button type="button" class="btn btn-outline-primary active" data-filter="all">{% trans "Todos" %}</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="residencial">{% trans "Residencial" %}</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="comercial">{% trans "Comercial" %}</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="industrial">{% trans "Industrial" %}</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="renovacion">{% trans "Renovación" %}</button>
+        </div>
+    </div>
+    
+    <!-- Proyectos -->
+    <div class="row" id="proyectos-container">
+        <!-- Proyecto 1 -->
+        <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="residencial">
+            <div class="card h-100">
+                <img src="{% static 'img/proyecto1.jpg' %}" class="card-img-top" alt="Residencial Las Palmas">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Residencial Las Palmas" %}</h5>
+                    <p class="card-text">{% trans "Complejo residencial de 24 viviendas con áreas comunes y piscina." %}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-primary">{% trans "Residencial" %}</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#proyectoModal1">
+                            {% trans "Ver detalles" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Proyecto 2 -->
+        <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="comercial">
+            <div class="card h-100">
+                <img src="{% static 'img/proyecto2.jpg' %}" class="card-img-top" alt="Centro Comercial El Bosque">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Centro Comercial El Bosque" %}</h5>
+                    <p class="card-text">{% trans "Centro comercial de 12,000 m² con 45 locales comerciales y estacionamiento subterráneo." %}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-success">{% trans "Comercial" %}</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#proyectoModal2">
+                            {% trans "Ver detalles" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Proyecto 3 -->
+        <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="industrial">
+            <div class="card h-100">
+                <img src="{% static 'img/proyecto3.jpg' %}" class="card-img-top" alt="Planta Industrial Tecnova">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Planta Industrial Tecnova" %}</h5>
+                    <p class="card-text">{% trans "Planta industrial de 8,000 m² con oficinas, almacén y área de producción." %}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-warning text-dark">{% trans "Industrial" %}</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#proyectoModal3">
+                            {% trans "Ver detalles" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Proyecto 4 -->
+        <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="renovacion">
+            <div class="card h-100">
+                <img src="{% static 'img/proyecto4.jpg' %}" class="card-img-top" alt="Renovación Edificio Histórico">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Renovación Edificio Histórico" %}</h5>
+                    <p class="card-text">{% trans "Renovación y rehabilitación de un edificio histórico para uso como hotel boutique." %}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-info text-dark">{% trans "Renovación" %}</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#proyectoModal4">
+                            {% trans "Ver detalles" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Proyecto 5 -->
+        <div class="col-md-6 col-lg-4 mb-4 proyecto-item" data-category="residencial">
+            <div class="card h-100">
+                <img src="{% static 'img/proyecto5.jpg' %}" class="card-img-top" alt="Condominio Vista Mar">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Condominio Vista Mar" %}</h5>
+                    <p class="card-text">{% trans "Condominio de lujo con 12 unidades, vistas al mar y amenidades exclusivas." %}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-primary">{% trans "Residencial" %}</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#proyectoModal5">
+                            {% trans "Ver detalles" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

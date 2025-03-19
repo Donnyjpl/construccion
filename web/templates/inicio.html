@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Inicio - Mi Empresa de Construcción" %}{% endblock %}
+
+{% block content %}
+    <!-- Banner principal -->
+    <div class="jumbotron bg-light p-5 rounded">
+        <h1 class="display-4">{% trans "Bienvenido a Mi Empresa de Construcción" %}</h1>
+        <p class="lead">{% trans "Soluciones de construcción de calidad para hogares y empresas desde 1995." %}</p>
+        <hr class="my-4">
+        <p>{% trans "Conoce nuestros servicios y proyectos destacados." %}</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'contacto' %}" role="button">
+            {% trans "Solicitar presupuesto" %}
+        </a>
+    </div>
+
+    <!-- Servicios destacados -->
+    <section class="my-5">
+        <h2 class="text-center mb-4">{% trans "Nuestros Servicios" %}</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'img/servicio-construccion.jpg' %}" class="card-img-top" alt="Construcción">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Construcción Residencial" %}</h5>
+                        <p class="card-text">{% trans "Construcción de viviendas unifamiliares y multifamiliares con los más altos estándares de calidad." %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'img/servicio-renovacion.jpg' %}" class="card-img-top" alt="Renovación">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Renovaciones" %}</h5>
+                        <p class="card-text">{% trans "Actualización y renovación de espacios existentes para mejorar su funcionalidad y estética." %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'img/servicio-comercial.jpg' %}" class="card-img-top" alt="Proyectos Comerciales">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Proyectos Comerciales" %}</h5>
+                        <p class="card-text">{% trans "Construcción de oficinas, tiendas, restaurantes y otros espacios comerciales." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section class="my-5">
+        <h2 class="text-center mb-4">{% trans "Proyectos Destacados" %}</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="{% static 'img/proyecto1.jpg' %}" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Residencial Las Palmas" %}</h5>
+                        <p class="card-text">{% trans "Complejo residencial de 24 viviendas con áreas comunes y piscina." %}</p>
+                        <a href="{% url 'proyectos' %}" class="btn btn-outline-primary">{% trans "Ver más detalles" %}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="{% static 'img/proyecto2.jpg' %}" class="card-img-top" alt="Proyecto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Centro Comercial El Bosque" %}</h5>
+                        <p class="card-text">{% trans "Centro comercial de 12,000 m² con 45 locales comerciales y estacionamiento subterráneo." %}</p>
+                        <a href="{% url 'proyectos' %}" class="btn btn-outline-primary">{% trans "Ver más detalles" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="my-5 bg-light p-4 rounded">
+        <h2 class="text-center mb-4">{% trans "Lo que dicen nuestros clientes" %}</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>{% trans "Excelente servicio y profesionalismo. Terminaron nuestro proyecto a tiempo y dentro del presupuesto." %}</p>
+                            <footer class="blockquote-footer">Ana Martínez, <cite title="Source Title">{% trans "Cliente Residencial" %}</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>{% trans "Muy satisfechos con la calidad de construcción y la atención al detalle en todo el proceso." %}</p>
+                            <footer class="blockquote-footer">Carlos Rodríguez, <cite title="Source Title">{% trans "Propietario de Restaurante" %}</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>{% trans "Recomiendo ampliamente sus servicios. Su equipo es muy profesional y el resultado final superó nuestras expectativas." %}</p>
+                            <footer class="blockquote-footer">Laura Gómez, <cite title="Source Title">{% trans "Gerente de Proyectos" %}</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
